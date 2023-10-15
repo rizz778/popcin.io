@@ -1,0 +1,258 @@
+body {
+    background-color: #131417;
+    color: white;
+}
+
+/*Naigation  bar*/
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nav {
+    background-color: #383838;
+    /* border-top: solid 2px black; */
+    border-bottom: solid 2px darkgrey;
+    height: 71px;
+    margin: -11px 0px;
+
+
+}
+
+/* Style the "Read More" button */
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+input[type="text"] {
+    width: 722px;
+    height: 11px;
+    /* box-sizing: border-box; */
+    padding: 13px;
+    border-radius: 16px;
+    background: #f5f2f2;
+    margin: -8px;
+}
+
+.nav ul li {
+    padding: 23px 33px;
+
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    /* border:solid 2px black; */
+    padding: 6px 46px;
+    cursor: pointer;
+
+}
+
+.about {
+    border: solid 2px rgb(255, 255, 255);
+    /* padding: 11px 12px; */
+    /* border-radius: 16px; */
+    /* color: black; */
+    /* background-color: white; */
+    /* cursor: pointer; */
+}
+
+.about:hover {
+    background-color: #000000;
+    color: white;
+}
+
+
+/*Left-Section*/
+.home-left {
+    border-right: solid 2px darkgrey;
+    float: left;
+    position: sticky;
+    background-color: #262626;
+    /* Use only 'sticky' for cros
+    s-browser compatibility */
+    top: 0;
+    bottom: 100;
+    width: 20%;
+    padding: 21px 2px;
+    height: 706px;
+
+    /* Add other styling as needed */
+    /* z-index: -1; */
+}
+
+.home-left ul li {
+    padding: 12px 0px;
+}
+
+.home-left ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.home-left ul li a:hover {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*Right-Section*/
+.home-right {
+    float: right;
+    width: 74%;
+    margin: 60px 0px;
+
+
+}
+
+/*Creating Post*/
+.create-post {
+    margin: 61px 0px;
+
+}
+
+#post-content {
+    border-radius: 14px;
+    width: 1028px;
+    height: 101px;
+    padding: 13px;
+}
+
+.post {
+    padding: 29px 27px;
+    border-radius: 14px;
+    background-color: #262626;
+    margin: 55px 0px;
+    /* border: solid 2px black; */
+}
+
+/*Comments*/
+.btn {
+    border: solid 2px black;
+    padding: 11px 12px;
+    border-radius: 16px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #525252;
+    color: white;
+}
+
+/* Style the collapsed text */
+p.collapsed {
+    display: none;
+}
+
+.addcomment {
+    margin: 20px 0px;
+    width: 808px;
+    height: 124px;
+    background-color: #565656;
+    border-radius: 15px;
+    padding: 19px;
+}
+
+.comment-section {
+    margin-top: 10px;
+    display: none;
+    padding-left: 20px;
+}
+
+
+.reply-section {
+    margin-top: 10px;
+    display: none;
+    padding-left: 20px;
+}
+
+.comment {
+    margin: 20px 0px;
+    width: 779px;
+    height: 135px;
+    background-color: #565656;
+    border-radius: 15px;
+    padding: 19px;
+}
+
+.addcomment textarea {
+    width: 788px;
+    height: 66px;
+    border-radius: 14px;
+    padding: 10px;
+}
+
+.reply {
+
+    margin: 14px 73px;
+    width: 524px;
+    height: 154px;
+    background-color: #ebebeb;
+    padding: 12px;
+    border-radius: 17px;
+
+}
+
+.comment-button {
+    border: solid 2px black;
+    padding: 11px 12px;
+    border-radius: 16px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.comment-button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.response {
+    padding: 0px 0px;
+}
+
+/*Footer*/
+.foot {
+    border-top-left-radius: 60px;
+    content: "";
+    clear: both;
+    display: table;
+    background-color: #3f3f3f;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 35px 0 30px;
+    z-index: 2;
+}
+
+.list {
+
+    margin: 0px 50px;
+    padding: 0px 56px;
+}
+
+.list h2 {
+    border-bottom: solid 4px white;
+}
+
+.list ul li {
+    border-bottom: dotted 2px white;
+    margin: 16px 0px;
+    padding: 0px 0px;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.list ul li a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime | Categories | PopCin</title>
+    <link rel="stylesheet" href="crime.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto&display=swap"" rel=" stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous">
+    <script src="crime.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><i class="fa-solid fa-film fa-2xl"></i></li>
+                <li style="font-family: 'Black Ops One', cursive; font-size: 21px;">PopCin</li>
+                <li><input type="text" id="search" placeholder="Search.." name="search"></li>
+                <li><a href="http://127.0.0.1:5500/About/about.html" class="about">About</a></li>
+                <li><a href="http://127.0.0.1:5500/Notif/notif.html"><i class="fa-solid fa-bell fa-xl"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="home-left">
+        <ul style="list-style: none;">
+            <li><a href="http://127.0.0.1:5500/all%20posts/allposts.html">All Posts</a></li>
+            <hr>
+            <li>Categories
+                <hr>
+                <ul style="list-style: none;">
+                    <li style="font-weight: bold; text-decoration: underline;"><a
+                            href="http://127.0.0.1:5500/Categories/Crime/crime.html">Crime</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/Drama/drama.html">Drama</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/romance/romance.html">Romance</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/comedy/comedy.html">Comedy</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/thriller/thriller.html">Thriller</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/mistery/mistery.html">Mistery</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/horror/horror.html">Horror</a></li>
+                </ul>
+            </li>
+            <hr>
+
+        </ul>
+    </div>
+    <div class="home-right">
+        <span style="font-size: 36px"><b>Trending/<span style="color: green;">Crime</span></b></span><i
+            class="fa-solid fa-arrow-trend-up"></i>
+        <div class="create-post">
+            <textarea id="post-content" rows="4" placeholder="What's on your mind?"></textarea>
+            <button class="btn" style="width: 102px;
+            margin: 10px 0px;" onclick="createPost()">Post</button>
+        </div>
+        <div class="post-section">
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> peaky_blinders <span style="color: darkgray">12 min ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b> Who do you think never got over johns death ??
+                        spoiler
+                        in my opinion Arthur , I think he changed completely after his death and just went back into his
+                        old habits to deal with his sadness and anger , I also think esme never got over it</b></p>
+
+
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">35</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">12</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>Besides me? Arthur.
+
+                            He is completely lost after John; too old for Finn, too messy for Tommy. Arthur never had
+                            the stuff to be the leader, but as a twosome with John, he had a perfect place. He had a
+                            purpose, and it gave him some dignity. I think he is deeply lonely after John's death and
+                            never recovers.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;"
+                                onclick="upvoteComment(this);"></i>23
+                            <span class="comment-upvote"></span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">78</span>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="comment">
+                        <i class="far fa-user fa-2xl"></i> <span>relative_evidence99</span> <span
+                            style="color: darkgray;">1 hr ago</span>
+                        <p>100% Arthur
+
+                            On the flip side, Finn never seemed to give a shit. Michael cared way more and only knew
+                            John for a few years</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">26</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">67</span>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-2xl"></i> <span>aksh123</span> <span style="color: darkgray;">2 hr
+                            ago</span>
+                        <p>Esme, for sure.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">34</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">78</span>
+                        </div>
+                        <hr>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> bettercallsaul <span style="color: darkgray">3 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>Why couldn't Cliff Main put together that Jimmy/Kim
+                        were behind the prank with the prostitutes?
+                        <br>
+                        He was meeting with Kim who he knew was associated with Jimmy when it happened. When Howard
+                        himself figured it out and told Cliff that it was related to Jimmy, Cliff still didn't believe
+                        him. How dense is he? Especially given the whole scenario was so unbelievable in the first place
+                        with Howard randomly showing up and kicking a hooker out of his car right as he was meeting with
+                        Kim.
+                        <p class="additional-text collapsed" style="line-height: 33px; font-size: 20px;">
+                            I thought Cliff Main would be pretty smart and intuitive given he has a big law firm named
+                            after him?
+                        </p>
+                    </b><button class="btn" onclick="toggleReadMore(this)">Read More</button></p>
+
+
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">103</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">280</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>drishti89</span> <span style="color: darkgray;">2 hr
+                            ago</span>
+                        <p>Sometimes real magic is simply putting more time and effort into something than anyone would
+                            reasonably expect.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">45</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">150</span>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>hecker_89</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>The guy who was the only non-actor in Jury Duty explained (paraphrasing): "Like I definitely
+                            knew something was off and this shit was crazy, but then I thought it would be even more
+                            crazy to think anyone would go to all this trouble just to prank me."</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">35</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">67</span>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>kamal69</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>Is he stupid?</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">35</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">67</span>
+                        </div>
+                        <hr>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> _ozark <span style="color: darkgray">3 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>
+                        [NO SPOILERS] I’m loving the show definetly go watch it
+                        Give me some comments and upvotes or whatever because I can't comment on anything because I lack
+                        "comment Karma" or some bs like that
+                    </b></p>
+
+
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">35</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">12</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">2 hr
+                            ago</span>
+                        <p>Thank you</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">-2</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">12</span>
+                        </div>
+                        <hr>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> dunder34 <span style="color: darkgray">5 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>[NO SPOILER] Laura Linney [NO SPOILER]
+                        I can’t believe I’ve waited this long to watch the series. It’s amazing. Bateman is no less than
+                        phenomenal. My only issue is with Wendy Byrde. I can’t tell if I just despise the character or
+                        if it’s Laura Linney’s performance and portrayal of her. It seems constantly so over dramatic.
+                        Her stuttering speech and mannerisms are similar in other roles she’s played. Unnaturally acting
+                        natural.
+                        <p class="additional-text collapsed" style="line-height: 33px; font-size: 20px;">
+                            I’m guessing it’s because I’ve never been exposed to her acting for such a long and
+                            consistent period of time. She’s talented, no doubt, but it’s irritating me. First World
+                            Problems
+                        </p>
+                    </b><button class="btn" onclick="toggleReadMore(this)">Read More</button></p>
+
+
+
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">12</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">20</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>drishti57</span> <span style="color: darkgray;">4 hr
+                            ago</span>
+                        <p>I think she and Ruth are the foundation of the show. Incredible!</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">8</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">12</span>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">3 hr
+                            ago</span>
+                        <p>
+                            I really like Marty,but Wendy and Laura Linney had stolen the show for me since S2.
+                        </p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">7</span>
+                            <i class="fas fa-down-long fa-2xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">10</span>
+                        </div>
+                        <hr>
+                    </div>
+
+
+                </div>
+            </div>
+
+        
+
+
+        </div>
+
+    </div>
+    <footer class="foot">
+        <div class="list" style="border-right: dotted 2px white; width: 33%;">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>123 Main Street</li>
+                <li>City, Country</li>
+                <li>Email: info@example.com</li>
+                <li>Phone: +1 (123) 456-7890</li>
+            </ul>
+        </div>
+        <div class="list" style="border-right: dotted 2px white; width: 33%;">
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="#facebook">Facebook</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#twitter">Twitter</a></li>
+                <li><a href="#discord">Discord</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2023 PopCin. All rights reserved.</p>
+    </footer>

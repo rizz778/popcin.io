@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Drama | Categories | PopCin</title>
+    <link rel="stylesheet" href="drama.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto&display=swap"" rel=" stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous">
+    <script src="drama.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><i class="fa-solid fa-film fa-2xl"></i></li>
+                <li style="font-family: 'Black Ops One', cursive; font-size: 21px;">PopCin</li>
+                <li><input type="text" id="search" placeholder="Search.." name="search"></li>
+                <li><a href="http://127.0.0.1:5500/About/about.html" class="about">About</a></li>
+                <li><a href="http://127.0.0.1:5500/Notif/notif.html"><i class="fa-solid fa-bell fa-xl"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="home-left">
+        <ul style="list-style: none;">
+            <li><a href="http://127.0.0.1:5500/all%20posts/allposts.html">All Posts</a></li>
+            <hr>
+            <li>Categories
+                <hr>
+                <ul style="list-style: none;">
+                    <li><a
+                            href="http://127.0.0.1:5500/Categories/Crime/crime.html">Crime</a></li>
+                    <li  style="font-weight: bold; text-decoration: underline;"><a href="http://127.0.0.1:5500/Categories/Drama/drama.html">Drama</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/romance/romance.html">Romance</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/comedy/comedy.html">Comedy</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/thriller/thriller.html">Thriller</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/mistery/mistery.html">Mistery</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/horror/horror.html">Horror</a></li>
+                </ul>
+            </li>
+            <hr>
+
+        </ul>
+    </div>
+    <div class="home-right">
+        <span style="font-size: 36px"><b>Trending/<span style="color: green;">Drama</span></b></span><i
+            class="fa-solid fa-arrow-trend-up"></i>
+        <div class="create-post">
+            <textarea id="post-content" rows="4" placeholder="What's on your mind?"></textarea>
+            <button class="btn" style="width: 102px;
+            margin: 10px 0px;" onclick="createPost()">Post</button>
+        </div>
+        <div class="post-section">
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> sexeducation_netflix <span style="color: darkgray">12 min ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>I have to admit I was truly shocked how terrible it got.
+                        The person who was supposed to be 6 months on testosterone, was not on testosterone. So great
+                        representation of how taking testosterone affects a trans person - apparently it isn’t changing
+                        anything.
+    
+                        The last scene of the last episode left me stunned and dysphoric af. I am aware that trans men
+                        engaging in sexual activity the way they portrayed it exists - but why that was shown to be the
+                        norm? Not even slightly mentioning that trans masculine people might find penetrative sex
+                        uncomfortable???
+    
+                        The guy Roman - shamed his girlfriend in front of other people for not having sex with him - that is
+                        absolutely disgusting. <p class="additional-text collapsed"
+                            style="line-height: 33px; font-size: 20px;">
+                            Pressuring women into sex, seeing it as an obligation in a relationship was not portrayed as clearly unacceptable in my opinion. Not even mentioning that a trans woman could feel dysphoric and shouldn’t ever feel like she has to like and want to engage in penetrating during intercourse.
+                        </p></b><button class="btn" onclick="toggleReadMore(this)">Read More</button></p>
+    
+    
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">35</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">12</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>From my perspective as a cis female... I agree with your impression of this latest season. I think they wanted to represent an inclusive college but then went above and beyond making the whole season really unrealistic.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>23
+                            <span class="comment-upvote"></span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">78</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>relative_evidence99</span> <span style="color: darkgray;">1
+                            hr ago</span>
+                        <p>Season 4 was a bit too much and boring with all its stories, some exaggerated to make a point while it could have developed naturally to make it... I see your point. Having god as a black woman was weird.. IMO it's silly for god to be either sex, not to mention be of any human race.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">26</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">67</span>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>aksh123</span> <span style="color: darkgray;">2 hr
+                            ago</span>
+                        <p>There's been centuries of depicting God as a white man so having Them be a black woman shouldn't be an issue.
+    
+                            Having God in Sex Education at all is the stupid thing.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">34</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">78</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> vinay54 <span style="color: darkgray">3 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>While the women are at the mall during the episode that
+                        phallus got flashed, the guys were in the women's bathroom and then Creed came in and they said,
+                        well, you're in here and Creed said yes, but I paid for that privilege! Lol. 
+                            Then he said that he goes into the ladies room for number two and he's been caught several times
+                            and he has paid dearly! So, my question is what do you think he has been paying for them to not
+                            tell on him lol
+                        </p></b>
+    
+    
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        id="upvote-post">103</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        id="like-post">280</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>drishti89</span> <span style="color: darkgray;">2 hr
+                            ago</span>
+                        <p>binod</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">45</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">150</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>hecker_89</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>I'm cis, but as soon as they had that short exchange during sex, I was like </p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">35</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">67</span>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>kamal69</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>He’s paying off the security guards to not report him. It’s made abundantly clear when they enter
+                            the mall and he turns left and goes into the security office. Also, if you look closely, just
+                            before he actually enters the office he takes out his wallet and shoves it up your butt.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">35</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">67</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> EliteNetflix <span style="color: darkgray">3 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>
+                    Isn't it weird that Anitta's character, who I thought was a teacher, is doing a shower scene with a student. Like I get it's hot or whatever but narratively, this is really dumb lol.
+                </b></p>
+    
+    
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                                class="upvote-post">35</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                                class="like-post">12</span>
+                        </div>
+                        <hr>
+                        <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                        <div class="comment-section">
+                            <i class="far fa-user"></i>
+                            <div class="addcomment">
+                                <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                                <button class="comment-button" onclick="addComment();">Add Comment</button>
+                            </div>
+                            <div class="comment">
+                                <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">2 hr
+                                    ago</span>
+                                <p>The video that is coming today is some behind the scenes stuff featuring the actors, not an actual scene from the the show.</p>
+                                <hr>
+                                <div class="response">
+                                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;"
+                                        onclick="upvoteComment(this);"></i>
+                                    <span class="comment-upvote">26</span>
+                                    <i class="fas fa-down-long fa-xl"></i>
+                                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                                    <span class="comment-like">12</span>
+                                </div>
+                                <hr>
+                            </div>
+    
+                            <div class="comment">
+                                <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">1 hr
+                                    ago</span>
+                                <p>Maybe a tour of the set, maybe something about how they film shower scenes. We'll see.</p>
+                                <hr>
+                                <div class="response">
+                                    <i class="fas fa-up-long fa-2xl" style="cursor: pointer;"
+                                        onclick="upvoteComment(this);"></i>
+                                    <span class="comment-upvote">7</span>
+                                    <i class="fas fa-down-long fa-xl"></i>
+                                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                                    <span class="comment-like">15</span>
+                                </div>
+                                <hr>
+                            </div>
+    
+    
+                        </div>
+    
+            </div>
+    
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> gurman_12 <span style="color: darkgray">4 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>Hot take: I don’t hate the boom guy
+                        Was it a bad story line? Yes. Was he a bad guy? Not at all. As the audience we can see he has
+                        feelings for Pam but he never acted on them, and never crossed a line. Especially since we know that
+                        Pam is VERY bad at perceiving when people are hitting on her <p class="additional-text collapsed"
+                            style="line-height: 33px; font-size: 20px;">
+                            I get the hate for the storyline, but for Brian? Nah. At the end of the day he was just someone
+                            that consoled Pam in a time of need and protected her when it came to it. I didn’t hate the
+                            storyline and I don’t hate the boom guy. Y’all seem to forget Jim was in the same exact position
+                            and DID act on it. It was for the better but it was that same exact context.
+                        </p></b><button class="btn" onclick="toggleReadMore(this)">Read More</button></p>
+    
+    
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">57</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">150</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">3 hr
+                            ago</span>
+                        <p>I agree lol he gets soooo much unwarranted hate for a guy who literally did nothing wrong. It’s
+                            not like when Pam was crying to him he was like “you should leave him” or anything.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">23</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">45</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">2 hr
+                            ago</span>
+                        <p>He’s hot. I’d let him boom me.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">35</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">12</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> dunder34 <span style="color: darkgray">5 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>Dwight said that he generally likes the people he works
+                        with, but with four exceptions
+                        Season 2, Episode 20.
+    
+                        Who are these exceptions?
+    
+    
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                                class="upvote-post">12</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                                class="like-post">20</span>
+                        </div>
+                        <hr>
+                        <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                        <div class="comment-section">
+                            <i class="far fa-user"></i>
+                            <div class="addcomment">
+                                <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                                <button class="comment-button" onclick="addComment();">Add Comment</button>
+                            </div>
+                            <div class="comment">
+                                <i class="far fa-user fa-xl"></i> <span>drishti57</span> <span style="color: darkgray;">4 hr
+                                    ago</span>
+                                <p>Hmm I'd guess Jim, Kelly, Kevin and meredith</p>
+                                <hr>
+                                <div class="response">
+                                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;"
+                                        onclick="upvoteComment(this);"></i>
+                                    <span class="comment-upvote">8</span>
+                                    <i class="fas fa-down-long fa-xl"></i>
+                                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                                    <span class="comment-like">12</span>
+                                </div>
+                                <hr>
+                            </div>
+    
+                            <div class="comment">
+                                <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">3 hr
+                                    ago</span>
+                                <p>Jim
+    
+                                    Kevin
+    
+                                    Shove it
+    
+                                    Up your butt
+    
+                                </p>
+                                <hr>
+                                <div class="response">
+                                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;"
+                                        onclick="upvoteComment(this);"></i>
+                                    <span class="comment-upvote">7</span>
+                                    <i class="fas fa-down-long fa-2xl"></i>
+                                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                                    <span class="comment-like">10</span>
+                                </div>
+                                <hr>
+                            </div>
+    
+    
+                        </div>
+    
+            </div>
+
+        
+
+
+        </div>
+
+    </div>
+    <footer class="foot">
+        <div class="list" style="border-right: dotted 2px white; width: 33%;">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>123 Main Street</li>
+                <li>City, Country</li>
+                <li>Email: info@example.com</li>
+                <li>Phone: +1 (123) 456-7890</li>
+            </ul>
+        </div>
+        <div class="list" style="border-right: dotted 2px white; width: 33%;">
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="#facebook">Facebook</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#twitter">Twitter</a></li>
+                <li><a href="#discord">Discord</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2023 PopCin. All rights reserved.</p>
+    </footer>

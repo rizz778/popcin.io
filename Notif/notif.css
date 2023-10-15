@@ -1,0 +1,161 @@
+body {
+    background-color: #131417;
+    color: white;
+}
+
+/*Naigation  bar*/
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nav {
+    background-color: #383838;
+    /* border-top: solid 2px black; */
+    border-bottom: solid 2px darkgrey;
+    height: 71px;
+    margin: -11px 0px;
+
+
+}
+
+/* Style the "Read More" button */
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+input[type="text"] {
+    width: 722px;
+    height: 11px;
+    /* box-sizing: border-box; */
+    padding: 13px;
+    border-radius: 16px;
+    background: #f5f2f2;
+    margin: -8px;
+}
+
+.nav ul li {
+    padding: 23px 33px;
+
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    /* border:solid 2px black; */
+    padding: 6px 46px;
+    cursor: pointer;
+
+}
+
+.about {
+    border: solid 2px rgb(255, 255, 255);
+    /* padding: 11px 12px; */
+    /* border-radius: 16px; */
+    /* color: black; */
+    /* background-color: white; */
+    /* cursor: pointer; */
+}
+
+.about:hover {
+    background-color: #000000;
+    color: white;
+}
+
+
+/*Left-Section*/
+.home-left {
+    border-right: solid 2px darkgrey;
+    float: left;
+    position: sticky;
+    background-color: #262626;
+    /* Use only 'sticky' for cros
+    s-browser compatibility */
+    top: 0;
+    bottom: 100;
+    width: 20%;
+    padding: 21px 2px;
+    height: 706px;
+
+    /* Add other styling as needed */
+    /* z-index: -1; */
+}
+
+.home-left ul li {
+    padding: 12px 0px;
+}
+
+.home-left ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.home-left ul li a:hover {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*Right-Section*/
+
+.home-right{
+    float:right;
+    width:74%;
+    margin:31px 0px;
+    
+
+}
+.container{
+    box-sizing: border-box;
+    border: solid 2px black;
+    margin: 33px 87px;
+    padding: 12px 15px;
+    width: 800px;
+    height: 125px;
+    border-radius: 12px;
+    line-height: 25px;
+    background-color: #565555;
+}
+     
+/*Footer*/
+.foot {
+    border-top-left-radius: 60px;
+    content: "";
+    clear: both;
+    display: table;
+    background-color: #3f3f3f;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 35px 0 30px;
+    z-index: 2;
+}
+
+.list {
+
+    margin: 0px 50px;
+    padding: 0px 56px;
+}
+
+.list h2 {
+    border-bottom: solid 4px white;
+}
+
+.list ul li {
+    border-bottom: dotted 2px white;
+    margin: 16px 0px;
+    padding: 0px 0px;
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.list ul li a:hover {
+    text-decoration: underline;
+}

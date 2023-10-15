@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Romance | Categories | PopCin</title>
+    <link rel="stylesheet" href="romance.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto&display=swap"" rel=" stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous">
+    <script src="romance.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><i class="fa-solid fa-film fa-2xl"></i></li>
+                <li style="font-family: 'Black Ops One', cursive; font-size: 21px;">PopCin</li>
+                <li><input type="text" id="search" placeholder="Search.." name="search"></li>
+                <li><a href="http://127.0.0.1:5500/About/about.html" class="about">About</a></li>
+                <li><a href="http://127.0.0.1:5500/Notif/notif.html"><i class="fa-solid fa-bell fa-xl"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="home-left">
+        <ul style="list-style: none;">
+            <li><a href="http://127.0.0.1:5500/all%20posts/allposts.html">All Posts</a></li>
+            <hr>
+            <li>Categories
+                <hr>
+                <ul style="list-style: none;">
+                    <li><a
+                            href="http://127.0.0.1:5500/Categories/Crime/crime.html">Crime</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/Drama/drama.html">Drama</a></li>
+                    <li   style="font-weight: bold; text-decoration: underline;"><a href="http://127.0.0.1:5500/Categories/romance/romance.html">Romance</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/comedy/comedy.html">Comedy</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/thriller/thriller.html">Thriller</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/mistery/mistery.html">Mistery</a></li>
+                    <li><a href="http://127.0.0.1:5500/Categories/horror/horror.html">Horror</a></li>
+                </ul>
+            </li>
+            <hr>
+
+        </ul>
+    </div>
+    <div class="home-right">
+        <span style="font-size: 36px"><b>Trending/<span style="color: green;">Romance</span></b></span><i
+            class="fa-solid fa-arrow-trend-up"></i>
+        <div class="create-post">
+            <textarea id="post-content" rows="4" placeholder="What's on your mind?"></textarea>
+            <button class="btn" style="width: 102px;
+            margin: 10px 0px;" onclick="createPost()">Post</button>
+        </div>
+
+        <div class="post-section">
+            
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> breakingood <span style="color: darkgray">12 min ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>why was walt so keen on working in bug infested houses if he spent a whole day trying to kill a single fly?
+                        </p></b>
+    
+    
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">35</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">12</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>Because in the Fly episode he was in the meth business. In the last season he was in the empire business.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>23
+                            <span class="comment-upvote"></span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">78</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+                    <div class="comment">
+                        <i class="far fa-user fa-2xl"></i> <span>relative_evidence99</span> <span style="color: darkgray;">1 hr ago</span>
+                        <p>He wasn't obsessed with the fly because it was a bug, he was obsessed because he felt like he controlled nothing except for the lab.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">26</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">67</span>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-2xl"></i> <span>aksh123</span> <span style="color: darkgray;">2 hr ago</span>
+                        <p>Breaking Bugs</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">34</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">78</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> pinkman <span style="color: darkgray">3 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>Name some of the places or setups where Walt and Jesse could have cooked instead of 'Vamonos pest'.
+                    The whole Vamonos pest doesn't make sense. Arduous task of setting up lab with heavy equipments. Walt didn't want to cook when there was a fly in Gus' lab. But this whole operation in pest infested houses. Not to mention they wouldn't able to cook if the 'Vamonos pest' didn't get a job for some days Or weeks.. <p
+                        class="additional-text collapsed" style="line-height: 33px; font-size: 20px;">
+                        And we know, that's not how the distribution works. Gus couldn't afford the lab to stop even for one week. What if the customers wanted that their CCTV cameras remain operational? And saw that no work (pest decontamination) is taking place? What if they demanded that they be allowed in the house? What if they just walked in the house with spare keys?
+                        </p></b><button class="btn" onclick="toggleReadMore(this)">Read More</button></p>
+    
+    
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">103</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">280</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>drishti89</span> <span style="color: darkgray;">2 hr
+                            ago</span>
+                        <p>I took it as him getting arrested.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">45</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">150</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>hecker_89</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>He’s paying off the security guards to not report him. It’s made abundantly clear when they enter the mall and he turns left and goes into the security office. Also, if you look closely, just before he actually enters the office he takes out his wallet and shoves it up your butt.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">35</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">67</span>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>kamal69</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>He’s paying off the security guards to not report him. It’s made abundantly clear when they enter the mall and he turns left and goes into the security office. Also, if you look closely, just before he actually enters the office he takes out his wallet and shoves it up your butt.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">35</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">67</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <div class="post">
+                <i class="far fa-user fa-xl"></i>  sacred_games_67<span style="color: darkgray">3 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>
+    
+                    In the scene where jamila gives gaitonde bj in jail, how is that even possible. Gaitonde was not given proper food, water, beaten up like hell and here he is getting oral pleasure from a high class escort. Need an explanation for this scene!
+                    </b></p>
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">35</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">12</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">2 hr
+                            ago</span>
+                        <p>I think honestly Michael would’ve hated RC. And I think RC might’ve demoted Michael.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">26</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">12</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">1 hr
+                            ago</span>
+                        <p>It would have been a power struggle for sure, two massive egos collide</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-2xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">7</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">15</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+    
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> gurman_12 <span style="color: darkgray">4 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>Disney+ Series‘WandaVision’ Coming to Blu-ray and 4K UHD Later This Year 
+                        </p></b>
+    
+    
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">57</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">150</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">3 hr
+                            ago</span>
+                        <p>I agree lol he gets soooo much unwarranted hate for a guy who literally did nothing wrong. It’s not like when Pam was crying to him he was like “you should leave him” or anything.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">23</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">45</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">2 hr
+                            ago</span>
+                        <p>He’s hot. I’d let him boom me.</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">35</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">12</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <div class="post">
+                <i class="far fa-user fa-xl"></i> dunder34 <span style="color: darkgray">5 hr ago</span>
+                <p style="line-height: 33px; font-size: 20px;"><b>
+                    Wanda or scarlet witch? And why?
+                    </b></p>
+                <hr>
+                <div class="response">
+                    <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvote(this);"></i><span
+                        class="upvote-post">12</span>
+                    <i class="fas fa-down-long fa-xl"></i>
+                    <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="like(this);"></i><span
+                        class="like-post">20</span>
+                </div>
+                <hr>
+                <button class="comment-button" onclick="toggleComments(this);">Show Comments</button>
+                <div class="comment-section">
+                    <i class="far fa-user"></i>
+                    <div class="addcomment">
+                        <textarea id="comment-text" placeholder="Add Comment"></textarea>
+                        <button class="comment-button" onclick="addComment();">Add Comment</button>
+                    </div>
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>drishti57</span> <span style="color: darkgray;">4 hr
+                            ago</span>
+                        <p>Hmm I'd guess Jim, Kelly, Kevin and meredith</p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">8</span>
+                            <i class="fas fa-down-long fa-xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">12</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+                    <div class="comment">
+                        <i class="far fa-user fa-xl"></i> <span>suvir_2</span> <span style="color: darkgray;">3 hr
+                            ago</span>
+                        <p>Jim
+    
+                            Kevin
+                            
+                            Shove it
+                            
+                            Up your butt
+                            
+                            </p>
+                        <hr>
+                        <div class="response">
+                            <i class="fas fa-up-long fa-xl" style="cursor: pointer;" onclick="upvoteComment(this);"></i>
+                            <span class="comment-upvote">7</span>
+                            <i class="fas fa-down-long fa-2xl"></i>
+                            <i class="far fa-heart fa-xl" style="cursor: pointer;" onclick="likeComment(this);"></i>
+                            <span class="comment-like">10</span>
+                        </div>
+                        <hr>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            
+
+
+        </div>
+
+    </div>
+    <footer class="foot">
+        <div class="list" style="border-right: dotted 2px white; width: 33%;">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>123 Main Street</li>
+                <li>City, Country</li>
+                <li>Email: info@example.com</li>
+                <li>Phone: +1 (123) 456-7890</li>
+            </ul>
+        </div>
+        <div class="list" style="border-right: dotted 2px white; width: 33%;">
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="#facebook">Facebook</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#twitter">Twitter</a></li>
+                <li><a href="#discord">Discord</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2023 PopCin. All rights reserved.</p>
+    </footer>

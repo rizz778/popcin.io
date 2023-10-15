@@ -1,0 +1,175 @@
+/*Naigation  bar*/
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+.nav{
+    /* border-top: solid 2px black; */
+    border-bottom: solid 2px darkgrey;
+    
+}
+
+
+.nav ul{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+}
+input[type="text"]{
+    width: 722px;
+    height: 11px;
+    /* box-sizing: border-box; */
+    padding: 13px;
+    border-radius: 16px;
+    background: #f5f2f2;
+    margin: -8px;
+}
+.nav ul li {
+    padding:5px 45px;
+    cursor: pointer;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    /* border:solid 2px black; */
+    padding: 6px 12px;
+    
+}
+.about{
+    border: solid 2px black;
+    padding: 11px 12px;
+    border-radius: 16px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+.about:hover{
+    background-color: #000000;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+/*Left-Section*/
+.about-left {
+    float: left;
+    background-image: url('loginleft.jpg');
+    height: 1866px;
+    width: 20%;
+}
+
+/*Center Section*/
+.about-center{
+    padding: 0px 56px;
+    box-sizing: border-box;
+}
+.intro{
+    /* border: solid 2px black; */
+    width: 764px;
+    padding: 0px 48px;
+    height: 443px;
+    margin: 69px 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/*Features*/
+.features{
+    display:flex;
+    flex-direction: row;
+    padding:79px 0px;
+    margin:0px 0px;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+    background-color: #f3f3f3;
+}
+.f{
+    border:solid 2px black;
+    width:218px;
+    height: 253px;
+    margin:0px 16px;
+    padding:29px 12px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: white;
+}
+/*Popularity*/
+.stats{
+    display:flex;
+    flex-direction: row;
+    padding:79px 0px;
+    margin:-67px 0px;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+    background-color: #f3f3f3;
+}
+.s{
+    border:solid 2px black;
+    width:218px;
+    height: 253px;
+    margin:0px 16px;
+    padding:29px 12px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.btn{
+    border: solid 2px black;
+    padding: 11px 11px;
+    /* border-radius: 16px; */
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    margin: 138px 277px;
+    height: 53px;
+    width: 137px;
+    font-family: 'Black Ops One', cursive;;
+}
+.btn:hover{
+    background-color: #000000;
+    color: white;
+}
+/*Right-Section*/
+.about-right{
+    
+    
+    float: right;
+    background-image: url('loginright.jpg');
+    height: 1866px;
+    width: 20%;
+}
+
+
+/*Footer*/
+.foot{
+    border-top-left-radius:60px ;
+    clear:both;
+    background-color: #000000;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    margin:25px 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 35px 0 30px;
+}
+.list{
+   
+    margin: 0px 50px;
+    padding: 0px 56px;
+}
+.list h2{
+    border-bottom: solid 4px white;
+}
+.list ul li{
+    border-bottom: dotted 2px white;
+    margin:16px 0px;
+    padding: 0px 0px;
+}
+.list ul li a{
+    text-decoration: none;
+    color: white;
+}
+.list ul li a:hover{
+    text-decoration: underline;
+}
